@@ -1,0 +1,177 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos preload page */
+.preload-view {
+  background: #e7e7e7;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.logo {
+  color: #3bb54a;
+  font-size: 50px;
+  margin: 100px auto 50px auto;
+  text-align: center;
+  text-shadow: -2px 4px 4px #000;
+  width: 300px;
+  height: 70px;
+}
+
+img {
+  width: 100%;
+}
+
+span {
+  color: #f37445;
+}
+
+.loader-frame {
+  width: 70px;
+  margin: 200px auto 50px auto;
+  position: relative;
+}
+
+.loader1, .loader2 {
+  position: absolute;
+  border: 5px solid transparent;
+  border-radius: 50%;
+}
+
+.loader1 {
+  width: 70px;
+  height: 70px;
+  border-top: 5px solid #3bb54a;
+  border-bottom: 5px solid #3bb54a;
+  animation: clockwisespin 2s linear 3;
+}
+
+.loader2 {
+  width: 60px;
+  height: 60px;
+  border-left: 5px solid #f37445;
+  border-right: 5px solid #f37445;
+  top: 5px; left: 5px;
+  animation: anticlockwisespin 2s linear 3;
+}
+
+@keyframes clockwisespin {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+@keyframes anticlockwisespin {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(-360deg);}
+}
+
+@keyframes fadeout {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
+/* Estilos de foodmap */
+.navbar {
+  margin-bottom: 0;
+}
+
+.meal-icon {
+  margin-right: 0.2em;
+}
+
+.info {
+  padding: 0.5em 3em; 
+}
+
+.bg-header {
+  background-image: url("../assets/images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 5rem 0;
+  color: azure;
+}
+
+#map {
+  margin-bottom: 1em;
+  width: 450px;
+  height: 300px;
+}
+
+.tip {
+  margin-top: 1em;
+}
+
+.restaurants {
+  display: block;
+  margin: 1em;
+}
+
+.img-resto {
+  margin-bottom: 1.5em;
+  border: 1px solid gray;
+  padding: 0.3em;
+}
+
+.resto-name {
+  font-family: 'Courgette', cursive;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.resto-name:hover {
+  cursor: pointer;
+  color: #cfa244;
+}
+
+.resto-name::before, .resto-name::after {
+  content: "";
+  display: inline-block;
+  margin: 4px;
+  border: 2px solid #cfa244;
+  width: 1.5em;
+}
+
+.cover {
+  opacity: 0.5; 
+  filter: opacity(50);
+  transition-duration: 1s;
+}
+
+.box-img {
+  position: relative;
+}
+
+.msg {
+  background: #0e1f31;
+  border-radius: 50%;
+  font-size: 30px;
+  left: 50%;
+  padding: 0.5em;
+  position: absolute;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+} 
+
+.fa-heart {
+  color: #f25268;
+}
+
+.title {
+  font-size: 18px;
+
+}
